@@ -31,7 +31,6 @@ class sxw-common {
     'texlive-latex-extra':;
     'openjdk-7-jdk':;
     'python3':;
-    'perl':;
     'python-dev':;
     'gcc-4.6':;
     'g++-4.6':;
@@ -50,8 +49,7 @@ class sxw-common {
     user => 'ci',
   }
 
-#  require
-#    sxw-perlsetup,
+  require sxw-perlsetup
 #    sxw-mknod
 }
 
@@ -92,5 +90,21 @@ class sxw-nfssetup-trusty ($user) {
     ensure  => running,
     enable  => true,
     require => Service['rpcbind'],
+  }
+}
+
+class sxw-perlsetup {
+  include cpan
+  package { 'perl':
+    ensure => installed,
+  }
+  cpan { 'Math::Expressions':
+    require => Package['perl'],
+  }
+  cpan { 'IO::Pty':
+    require => Package['perl'],
+  }
+  cpan { 'Expect':
+    require => Package['perl'],
   }
 }

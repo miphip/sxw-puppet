@@ -43,5 +43,9 @@ class sxw::common {
     'python3-sip':;
   }
 
+  class { 'sxw::nfssetup-trusty':
+    user => 'ci',
+  }
+
   include sxw::mknod
 }

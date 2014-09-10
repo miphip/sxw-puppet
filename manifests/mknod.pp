@@ -1,2 +1,2 @@
-class mknod {
+class sxw::mknod {
 }

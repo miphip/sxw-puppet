@@ -1,4 +1,4 @@
-class common {
+class sxw::common {
   package { 'python-software-properties': }
   package {
     'subversion':;

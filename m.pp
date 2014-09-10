@@ -1,2 +1,1 @@
-include sxw::common
-
+include sxw::dev

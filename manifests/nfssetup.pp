@@ -1,4 +1,4 @@
-class sxw::nfssetup-trusty ($user) {
+class sxw::nfssetup ($user) {
   user { nfs_user:
     name       => $user,
     ensure     => present,

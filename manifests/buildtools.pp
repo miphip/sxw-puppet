@@ -1,3 +1,3 @@
 class sxw::buildtools {
-  inclyde sxw::envsetup
+  include sxw::envsetup
 }

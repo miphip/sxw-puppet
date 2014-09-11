@@ -43,7 +43,7 @@ class sxw::common {
     'python3-sip':;
   }
 
-  class { 'sxw::nfssetup-trusty':
+  class { 'sxw::nfssetup':
     user => 'ci',
   }
 
